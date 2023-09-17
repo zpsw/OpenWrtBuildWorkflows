@@ -1,0 +1,1 @@
+qm importdisk 102 /var/lib/vz/template/iso/openwrt-x86-64-generic-squashfs-combined-efi.img local-lvm
