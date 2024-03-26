@@ -140,7 +140,7 @@ jobs:
       - name: Upgrade golang
         run: |
           pwd
-          ls -F
+          ls -l
           cd openwrt/ && rm -rf feeds/packages/lang/golang
           cd openwrt/ && git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
