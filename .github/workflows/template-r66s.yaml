@@ -139,9 +139,10 @@ jobs:
 
       - name: Upgrade golang
         run: |
-          echo "$(pwd)" >> $GITHUB_OUTPUT
-          rm -rf feeds/packages/lang/golang
-          git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+          pwd
+          ls
+          cd openwrt/ && rm -rf feeds/packages/lang/golang
+          cd openwrt/ && git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
       - name: Load custom configuration
         run: |
