@@ -142,7 +142,7 @@ jobs:
           pwd
           ls -l
           cd /workdir/openwrt && rm -rf feeds/packages/lang/golang
-          cd /workdir/openwrt && git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+          cd /workdir/openwrt && git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 
       - name: Load custom configuration
         run: |
