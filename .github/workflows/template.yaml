@@ -95,7 +95,7 @@ jobs:
 
   build:
     name: Build firmware
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: check
     permissions:
       contents: write
@@ -136,6 +136,13 @@ jobs:
 
       - name: Install feeds
         run: cd openwrt/ && ./scripts/feeds install -a
+
+      - name: Upgrade golang
+        run: |
+          pwd
+          ls -l
+          cd /workdir/openwrt && rm -rf feeds/packages/lang/golang
+          cd /workdir/openwrt && git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 
       - name: Load custom configuration
         run: |
